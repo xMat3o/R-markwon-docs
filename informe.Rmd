@@ -66,7 +66,10 @@ __Interpretación $R^2$:__ _El modelo de regresión lineal obtenido explica el `
 
 ### Pruebas de hipótesis
 
-__Ejercicio lector__
+Como $t=`r summary(reg)[[4]][2,3]`$  es `r tex<-"mayor"; if(summary(reg)[[4]][2,3]>qt(0.95,1,(nrow(data)-2))) tex<-"mayor"; tex` que $t_{`r (nrow(data)-2)`}(1-\frac{\alpha}{2})= `r qt(0.975,(nrow(data)-2))`$
+`r tex<-"no rechazo"; if(summary(reg)[[4]][2,3]>qt(0.95,(nrow(data)-2))) tex<-"rechazo"; tex`
+$t_0: \beta_2=0$.
+
 
 
 
